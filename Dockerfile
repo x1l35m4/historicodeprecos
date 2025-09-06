@@ -17,7 +17,7 @@ FROM openjdk:17-jdk-slim
 EXPOSE 8080
 
 # Copiar o JAR gerado na etapa de build
-COPY --from=build /target/deploy_render-1.0.0.jar app.jar
+COPY --from=build /target/historicodeprecos-0.0.1-SNAPSHOT.jar app.jar
 
 # Entrypoint
 ENTRYPOINT ["java", "-jar", "app.jar"]
